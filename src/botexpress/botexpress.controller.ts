@@ -17,7 +17,7 @@ export class BotexpressController {
   constructor(private readonly botexpressService: BotexpressService) {}
   @IsPublic()
   @Post()
-  create(@Body() createBotexpressDto: CreateBotexpressDto) {
+  create(@Body() createBotexpressDto: any) {
     return this.botexpressService.create(createBotexpressDto);
   }
 
